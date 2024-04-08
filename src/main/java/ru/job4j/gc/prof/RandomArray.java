@@ -2,7 +2,7 @@ package ru.job4j.gc.prof;
 
 import java.util.Random;
 
-public class RandomArray implements Data{
+public class RandomArray implements Data {
 
     private int[] array;
     private Random random;
