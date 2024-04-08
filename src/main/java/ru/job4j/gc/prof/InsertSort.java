@@ -3,7 +3,7 @@ package ru.job4j.gc.prof;
 public class InsertSort implements Sort {
 
     @Override
-    public boolean sort (Data data) {
+    public boolean sort(Data data) {
         int[] array = data.getClone();
         sort(array);
         return true;
