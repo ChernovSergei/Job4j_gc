@@ -11,6 +11,7 @@ public class Menu {
     public static final int MERGE_SORT = 2;
     public static final int BUBBLE_SORT = 3;
     public static final int INSERT_SORT = 4;
+    public static final int CLOSE = 6;
 
     public static final String BEGIN = " Sort start - ";
     public static final String END = " Sort end - ";
