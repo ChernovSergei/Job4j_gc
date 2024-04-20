@@ -1,5 +1,6 @@
 package ru.job4j.cache;
 
+import java.io.IOException;
 import java.lang.ref.SoftReference;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,15 +10,11 @@ public abstract class AbstractCache<K, V> {
     private final Map<K, SoftReference<V>> cache = new HashMap<>();
 
     public final void put(K key, V value) {
-        SoftReference<V> newValue = new SoftReference<>(value);
-        cache.put(key, newValue);
+        cache.put(key, new SoftReference<>(value));
     }
 
     public final V get(K key) {
-        if (cache.get(key) != null) {
-            return cache.get(key).get();
-        }
-        return load(key);
+        return (cache.get(key) == null || cache.get(key).get() == null) ? load(key) : cache.get(key).get();
     }
 
     protected abstract V load(K key);

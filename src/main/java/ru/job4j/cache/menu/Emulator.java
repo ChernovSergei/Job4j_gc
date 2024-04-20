@@ -17,7 +17,8 @@ public class Emulator {
                     + "\n1) Point a directory"
                     + "\n2) Point directory by default"
                     + "\n3) Put data into cache"
-                    + "\n4) Get data");
+                    + "\n4) Get data"
+                    + "\nAny number to exit");
             Scanner scanner = new Scanner(System.in);
             String answer = scanner.next();
             switch (answer) {
